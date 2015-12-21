@@ -1,0 +1,6 @@
+{
+  "name": "site",
+  "devDependencies": {
+    "browser-sync": "^2.10.1"
+  }
+}
