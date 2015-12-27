@@ -1,0 +1,14 @@
+.copyright {
+  text-align: center;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #494949;
+  height: 30px;
+}
+
+.copyright__text {
+  color: #eaeaea;
+  font: 12px/28px "open_sansregular", sans-serif;
+}

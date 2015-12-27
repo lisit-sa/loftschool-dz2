@@ -1,0 +1,25 @@
+.icons-sprite, .address:after {
+  background-image: url('../../img/icons-sa12334029d.png');
+  background-repeat: no-repeat;
+}
+
+.address {
+  display: block;
+  color: #333333;
+  float: right;
+  font: 14px/24px "open_sansregular", sans-serif;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+}
+.address:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 5px;
+  background-position: 0 -136px;
+  width: 12px;
+  height: 16px;
+}

@@ -1,0 +1,26 @@
+.icons-sprite, .phone__link:after {
+  background-image: url('../../img/icons-sa12334029d.png');
+  background-repeat: no-repeat;
+}
+
+.phone {
+  float: right;
+  margin-left: 109px;
+}
+
+.phone__link {
+  color: #333;
+  font: 18px/24px "open_sanssemibold", sans-serif;
+  text-decoration: none;
+  position: relative;
+}
+.phone__link:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  background-position: 0 -246px;
+  width: 12px;
+  height: 16px;
+}

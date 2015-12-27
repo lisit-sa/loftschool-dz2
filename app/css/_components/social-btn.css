@@ -1,0 +1,69 @@
+.social-sprite, .social-btn .facebook, .social-btn .vk, .social-btn .twitter, .social-btn .facebook:hover, .social-btn .vk:hover, .social-btn .twitter:hover {
+  background-image: url('../../img/social-s514906711f.png');
+  background-repeat: no-repeat;
+}
+
+.social-btn__list {
+  padding: 0;
+  margin: 0;
+  margin-left: -15px;
+}
+
+.social-sprite, .social-btn .facebook, .social-btn .vk, .social-btn .twitter, .social-btn .facebook:hover, .social-btn .vk:hover, .social-btn .twitter:hover {
+  display: block;
+}
+
+.social-btn {
+  float: left;
+  font-size: 0;
+}
+.social-btn .facebook {
+  background-position: 0 -412px;
+  width: 26px;
+  height: 26px;
+}
+.social-btn .facebook:hover, .social-btn .facebook.fb-hover {
+  background-position: 0 -286px;
+}
+.social-btn .vk {
+  background-position: 0 -1488px;
+  width: 27px;
+  height: 26px;
+}
+.social-btn .vk:hover, .social-btn .vk.vk-hover {
+  background-position: 0 -1362px;
+}
+.social-btn .twitter {
+  background-position: 0 -950px;
+  width: 26px;
+  height: 26px;
+}
+.social-btn .twitter:hover, .social-btn .twitter.tw-hover {
+  background-position: 0 -824px;
+}
+
+.social-btn .facebook:hover {
+  background-position: 0 -286px;
+  width: 26px;
+  height: 26px;
+}
+.social-btn .vk:hover {
+  background-position: 0 -1362px;
+  width: 27px;
+  height: 26px;
+}
+.social-btn .twitter:hover {
+  background-position: 0 -824px;
+  width: 26px;
+  height: 26px;
+}
+
+.social-btn__item {
+  list-style: none;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.social-btn__link {
+  display: block;
+}

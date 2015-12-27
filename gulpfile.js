@@ -1,14 +1,29 @@
 'use strict';
 
 var gulp = require("gulp"),
-		wiredep = require('wiredep').stream,
-    browserSync = require('browser-sync');
+	wiredep = require('wiredep').stream,
+    browserSync = require('browser-sync'),
+    jade = require('jade');
+
 // Следим за bower
 	gulp.task('wiredep', function () {
 	  gulp.src('app/*.html')
 	    .pipe(wiredep())
 	    .pipe(gulp.dest('app/'))
 	});
+
+var jadePath = './app/jade/*.jade';
+
+gulp.task('jade', function() {
+  var YOUR_LOCALS = {};
+ 
+  gulp.src(jadePath)
+    .pipe(jade({
+      locals: YOUR_LOCALS,
+      pretty: '\t',
+    }))
+    .pipe(gulp.dest('./app'))
+});
 
 // Слежка
 gulp.task('watch', function () {
@@ -20,7 +35,9 @@ gulp.task('watch', function () {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('default', ['server', 'watch']);
+gulp.task('watch', function(){
+	gulp.watch('jadePath', ['jade']);
+});
 
 // Переносим HTML, CSS, JS в папку dist 
 	gulp.task('useref', function () {

@@ -1,0 +1,30 @@
+@import "_components/price-select";
+@import "_components/info";
+@import "_components/accordeon";
+@import "_components/filter";
+@import "_components/product-item";
+.general{
+	margin-bottom: 30px;
+}
+.general__container {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.page-title {
+	color: #333;
+    text-align: left;
+    margin: 0;
+    font: 20px/1 "open_sansbold", sans-serif;
+    font-weight: bold;
+    margin-bottom: 31px;
+}
+.sidebar{
+	float: left;
+	width: 333px;
+}
+.main-content{
+    float: right;
+    width: 743px;
+    margin-bottom: 10px;
+}

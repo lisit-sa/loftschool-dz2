@@ -1,0 +1,68 @@
+$social-spacing: 100px;
+@import "social/*.png";
+
+
+.social-btn__list {
+    padding: 0;
+    margin: 0;
+    margin-left: -15px;
+}
+.social-sprite{
+        display: block;
+    }
+
+.social-btn {
+    float: left;
+    font-size: 0;
+
+    
+    .facebook {
+        @include social-sprite(fb);
+        width: social-sprite-width(fb);
+        height: social-sprite-height(fb);
+    }
+
+    .vk {
+        @include social-sprite(vk);
+        width: social-sprite-width(vk);
+        height: social-sprite-height(vk);
+    }
+
+    .twitter {
+        @include social-sprite(tw);
+        width: social-sprite-width(tw);
+        height: social-sprite-height(tw);
+    }
+}
+
+.social-btn {
+
+    .facebook:hover {
+        @include social-sprite(fb-hover);
+        width: social-sprite-width(fb-hover);
+        height: social-sprite-height(fb-hover);
+    }
+
+    .vk:hover {
+        @include social-sprite(vk-hover);
+        width: social-sprite-width(vk-hover);
+        height: social-sprite-height(vk-hover);
+    }
+
+    .twitter:hover {
+        @include social-sprite(tw-hover);
+        width: social-sprite-width(tw-hover);
+        height: social-sprite-height(tw-hover);
+    }
+
+}
+
+.social-btn__item {
+    list-style: none;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.social-btn__link{
+    display: block;
+}

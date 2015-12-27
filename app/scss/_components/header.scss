@@ -1,0 +1,33 @@
+@import "../_components/social-btn";
+@import "../_components/address";
+@import "../_components/telephone";
+@import "../_components/logo-header";
+@import "../_components/search";
+@import "../_components/menu";
+@import "../_components/navigation";
+@import "../_components/breadcrumbs";
+$white: #fff;
+$color_border: #ebedef;
+
+.main-header {
+	min-width: 1100px;
+}
+.main-header__contacts {
+	background: $white;
+	border-bottom: 1px solid $color_border;
+	padding: 25px 0 26px;
+	margin-bottom: 10px;
+}
+.contacts__container {
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+}
+.main-header__logo {
+    padding: 20px 0 17px;
+}
+.logo__container {
+	width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}

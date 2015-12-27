@@ -1,0 +1,74 @@
+mixin products-list(products)
+   div.product-list.clearfix
+      each product in products
+         - var product = product
+         div.product-item.clearfix
+            div.product-item__slider.slider-product
+               div.slider-product__wrap-main-img
+                  img(src="img/#{product.mainImg}").slider-product__main-img
+               div.slider-product__min
+                  ul.slider-product__min-list
+                     each img in product.minImg
+                        li.slider-product__min-list__item
+                           img(src="img/#{img}").slider-product__min-list__item__img
+               div.product-item__vendor.vendor-product
+                  span.vendor-product__text Артикул 
+                  span.vendor-product__value= product.vendorValue
+            div.product-item__description.description-product
+               h2.description-product__title= product.title
+               p.description-product__text= product.description
+               div.description-product__options.options-product
+                  ul.options-product__list
+                     li.options-product__item
+                        div.options-product__item__inner.clearfix
+                           span.options-product__item__parameter Тип Sim-карты 
+                           span.options-product__item__value= product.itemValueOne
+                     li.options-product__item
+                        div.options-product__item__inner.clearfix
+                           span.options-product__item__parameter Количество SIM-карт 
+                           span.options-product__item__value= product.itemValueTwo
+                     li.options-product__item
+                        div.options-product__item__inner.clearfix
+                           span.options-product__item__parameter Цвет 
+                           span.options-product__item__value= product.itemValueThree
+                     li.options-product__item
+                        div.options-product__item__inner.clearfix
+                           span.options-product__item__parameter ОС 
+                           span.options-product__item__value= product.itemValueFour
+                     li.options-product__item
+                        div.options-product__item__inner.clearfix
+                           span.options-product__item__parameter Связь 3G 
+                           span.options-product__item__value= product.itemValueFive
+                     li.options-product__item
+                        div.options-product__item__inner.clearfix
+                           span.options-product__item__parameter 4G (LTE) 
+                           span.options-product__item__value= product.itemValueSix
+                     li.options-product__item
+                        div.options-product__item__inner.clearfix
+                           span.options-product__item__parameter CPS-модуль 
+                           span.options-product__item__value= product.itemValueSeven
+
+               div.description-product__rating
+                  ul.description-product__rating__list
+                        li.description-product__rating__item.description-product__rating__item_active
+                           a(href="#").description-product__rating__link.
+                        li.description-product__rating__item.description-product__rating__item_active
+                           a(href="#").description-product__rating__link
+                        li.description-product__rating__item.description-product__rating__item_active
+                           a(href="#").description-product__rating__link
+                        li.description-product__rating__item.description-product__rating__item_active
+                           a(href="#").description-product__rating__link
+                        li.description-product__rating__item
+                           a(href="#").description-product__rating__link
+                  span.description-product__rating__value 4
+
+
+            div.product-item__purchase.purchase-product.clearfix
+               div.purchase-product__price= product.price
+               div.purchase-product__buy
+                  input(type="submit", value = "В корзину").purchase-product__in-basket
+                  div.purchase-product__wrap-availability
+                     span.purchase-product__availability В наличии
+
+
+

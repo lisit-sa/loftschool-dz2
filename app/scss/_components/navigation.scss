@@ -1,0 +1,39 @@
+.main-header__navigation {
+    margin-bottom: 27px;
+}
+.navigation__container {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.navigation {
+    background: #fff;
+    border-bottom: 2px solid #ebedef;
+}
+.navigation__list {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+.navigation__item {
+    display: inline-block;
+
+    &_active {
+        .navigation__link {
+            background: #ff6600;
+            color: #fff;
+        }
+    }
+}
+.navigation__link {
+    display: block;
+    color: #333;
+    font: 16px "open_sanssemibold", sans-serif;
+    font-weight: 600;
+    padding: 15px 13px;
+    text-decoration: none;
+    
+    &:hover {
+        background: #e4e2e2;
+    }
+}

@@ -1,0 +1,6 @@
+mixin price-select(items, activeIndex)
+	nav.price-select
+		ul.price-select__list
+			each item, index in items
+				li(class="price-select__item " + ((activeIndex == index) ? 'price-select__item_active' : ''))
+					a(href="#" class="price-select__link")=item

@@ -1,0 +1,7 @@
+mixin navigation(items, activeIndex)
+	nav.navigation
+		div.navigation__container
+			ul.navigation__list
+				each item, index in items
+					li(class="navigation__item " + ((activeIndex == index) ? 'navigation__item_active' : ''))
+						a(href="#" class= "navigation__link")=item

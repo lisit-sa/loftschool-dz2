@@ -1,0 +1,1781 @@
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+@font-face {
+  font-family: "open_sansitalic";
+  font-weight: normal;
+  font-style: normal;
+  src: url("opensans-italic.eot?#iefix") format("embed-opentype"), url("opensans-italic.woff2") format("woff2"), url("opensans-italic.woff") format("woff"), url("opensans-italic.ttf") format("ttf"), url("opensans-italic.svg#open_sansitalic") format("svg");
+  src: url("opensans-italic.eot");
+}
+@font-face {
+  font-family: "open_sanslight";
+  font-weight: normal;
+  font-style: normal;
+  src: url("opensans-light.eot?#iefix") format("embed-opentype"), url("opensans-light.woff2") format("woff2"), url("opensans-light.woff") format("woff"), url("opensans-light.ttf") format("ttf"), url("opensans-light.svg#open_sanslight") format("svg");
+  src: url("opensans-light.eot");
+}
+@font-face {
+  font-family: "open_sansbold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("opensans-bold.eot?#iefix") format("embed-opentype"), url("opensans-bold.woff2") format("woff2"), url("opensans-bold.woff") format("woff"), url("opensans-bold.ttf") format("ttf"), url("opensans-bold.svg#open_sansbold") format("svg");
+  src: url("opensans-bold.eot");
+}
+@font-face {
+  font-family: "open_sansregular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("opensans-regular.eot?#iefix") format("embed-opentype"), url("opensans-regular.woff2") format("woff2"), url("opensans-regular.woff") format("woff"), url("opensans-regular.ttf") format("ttf"), url("opensans-regular.svg#open_sansregular") format("svg");
+  src: url("opensans-regular.eot");
+}
+html {
+  font-size: 14px;
+}
+
+.icons-sprite, .address:after, .phone__link:after, .show-accordeon:after, .hide-accordeon:after, .list-radio__input-radio-origin + .list-radio__input-radio-fake, .list-radio__input-radio-origin:checked + .list-radio__input-radio-fake, .list-check__input-check-origin + .list-check__input-check-fake, .list-check__input-check-origin:checked + .list-check__input-check-fake, .slider-interval__toggle, .view-list__item_list-one .view-list__link:after, .view-list__item_list-two .view-list__link:after, .view-list__item_list-three .view-list__link:after, .description-product__rating__link, .description-product__rating__item_active .description-product__rating__link, .purchase-product__price:after, .products-list_list-view .purchase-product__price:after {
+  background-image: url('../img/icons-sa12334029d.png');
+  background-repeat: no-repeat;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper:after {
+  content: "";
+  height: 220px;
+  display: block;
+}
+
+footer {
+  height: 220px;
+  margin-top: -220px;
+}
+
+.social-sprite, .social-btn .facebook, .social-btn .vk, .social-btn .twitter, .social-btn .facebook:hover, .social-btn .vk:hover, .social-btn .twitter:hover, .social-btn-footer .facebook, .social-btn-footer .vk, .social-btn-footer .twitter, .social-btn-footer .facebook:hover, .social-btn-footer .vk:hover, .social-btn-footer .twitter:hover {
+  background-image: url('../img/social-s514906711f.png');
+  background-repeat: no-repeat;
+}
+
+.social-btn__list {
+  padding: 0;
+  margin: 0;
+  margin-left: -15px;
+}
+
+.social-sprite, .social-btn .facebook, .social-btn .vk, .social-btn .twitter, .social-btn .facebook:hover, .social-btn .vk:hover, .social-btn .twitter:hover, .social-btn-footer .facebook, .social-btn-footer .vk, .social-btn-footer .twitter, .social-btn-footer .facebook:hover, .social-btn-footer .vk:hover, .social-btn-footer .twitter:hover {
+  display: block;
+}
+
+.social-btn {
+  float: left;
+  font-size: 0;
+}
+.social-btn .facebook {
+  background-position: 0 -412px;
+  width: 26px;
+  height: 26px;
+}
+.social-btn .facebook:hover, .social-btn .facebook.fb-hover {
+  background-position: 0 -286px;
+}
+.social-btn .vk {
+  background-position: 0 -1488px;
+  width: 27px;
+  height: 26px;
+}
+.social-btn .vk:hover, .social-btn .vk.vk-hover {
+  background-position: 0 -1362px;
+}
+.social-btn .twitter {
+  background-position: 0 -950px;
+  width: 26px;
+  height: 26px;
+}
+.social-btn .twitter:hover, .social-btn .twitter.tw-hover {
+  background-position: 0 -824px;
+}
+
+.social-btn .facebook:hover {
+  background-position: 0 -286px;
+  width: 26px;
+  height: 26px;
+}
+.social-btn .vk:hover {
+  background-position: 0 -1362px;
+  width: 27px;
+  height: 26px;
+}
+.social-btn .twitter:hover {
+  background-position: 0 -824px;
+  width: 26px;
+  height: 26px;
+}
+
+.social-btn__item {
+  list-style: none;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.social-btn__link {
+  display: block;
+}
+
+.address {
+  display: block;
+  color: #333333;
+  float: right;
+  font: 14px/24px "open_sansregular", sans-serif;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+}
+.address:after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 5px;
+  background-position: 0 -136px;
+  width: 12px;
+  height: 16px;
+}
+
+.phone {
+  float: right;
+  margin-left: 109px;
+}
+
+.phone__link {
+  color: #333;
+  font: 18px/24px "open_sanssemibold", sans-serif;
+  text-decoration: none;
+  position: relative;
+}
+.phone__link:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  background-position: 0 -246px;
+  width: 12px;
+  height: 16px;
+}
+
+.main-header__logo {
+  margin-bottom: 15px;
+}
+
+.logo {
+  float: left;
+}
+
+.logo__link {
+  display: block;
+  width: 238px;
+  text-decoration: none;
+}
+
+.logo__img {
+  display: block;
+  width: 100%;
+}
+
+.logo__text {
+  font-size: 0;
+}
+
+.search {
+  float: right;
+  font-size: 0;
+}
+
+.search__field {
+  box-sizing: border-box;
+  background: #fbfbfb;
+  border: 1px solid #dee1e4;
+  border-right: none;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  color: #7f7f7f;
+  height: 35px;
+  width: 288px;
+  padding: 10px 17px 10px;
+  display: inline-block;
+  vertical-align: top;
+  font: 14px "open_sanslight", sans-serif;
+}
+
+.search__button {
+  box-sizing: border-box;
+  color: #fff;
+  font: 16px "open_sanssemibold", sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  height: 35px;
+  width: 79px;
+  border: none;
+  background: #ff6e35;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.menu {
+  float: right;
+  margin-top: 5px;
+  margin-left: 16px;
+}
+
+.menu__list {
+  font-size: 0;
+  margin-left: 22px;
+  margin-right: 0;
+  padding: 0;
+}
+
+.menu__item {
+  display: inline-block;
+  margin-left: 33px;
+}
+
+.menu__link {
+  color: #333333;
+  display: block;
+  text-decoration: underline;
+  font: 16px "open_sanssemibold", sans-serif;
+  font-weight: 600;
+}
+.menu__link:hover {
+  color: #ff6e35;
+}
+
+.main-header__navigation {
+  margin-bottom: 27px;
+}
+
+.navigation__container {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navigation {
+  background: #fff;
+  border-bottom: 2px solid #ebedef;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.navigation__item {
+  display: inline-block;
+}
+.navigation__item_active .navigation__link {
+  background: #ff6600;
+  color: #fff;
+}
+
+.navigation__link {
+  display: block;
+  color: #333;
+  font: 16px "open_sanssemibold", sans-serif;
+  font-weight: 600;
+  padding: 15px 13px;
+  text-decoration: none;
+}
+.navigation__link:hover {
+  background: #e4e2e2;
+}
+
+.main-header__breadcrumbs {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.breadcrumbs {
+  margin-bottom: 23px;
+}
+
+.breadcrumbs__list {
+  font-size: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  position: relative;
+}
+.breadcrumbs__item:after {
+  content: ">";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -12px;
+  font: 14px/20px "open_sansregular", sans-serif;
+}
+.breadcrumbs__item:last-child:after {
+  content: "";
+}
+.breadcrumbs__item:last-child {
+  margin-left: 18px;
+}
+
+.breadcrumbs__link {
+  color: #333333;
+  font: 14px/20px "open_sansregular", sans-serif;
+  display: block;
+  text-decoration: none;
+}
+.breadcrumbs__link:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+.main-header {
+  min-width: 1100px;
+}
+
+.main-header__contacts {
+  background: #fff;
+  border-bottom: 1px solid #ebedef;
+  padding: 25px 0 26px;
+  margin-bottom: 10px;
+}
+
+.contacts__container {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-header__logo {
+  padding: 20px 0 17px;
+}
+
+.logo__container {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.price-select {
+  margin-bottom: 38px;
+}
+
+.price-select__list {
+  background: #fbfbfb;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #dee1e4;
+  border-radius: 5px;
+}
+
+.price-select__item {
+  list-style: none;
+  border-bottom: 1px solid #dee1e4;
+}
+.price-select__item:last-child {
+  border-bottom: none;
+}
+.price-select__item_active {
+  color: #5d656c;
+  background-color: #d9e5ea;
+}
+
+.price-select__link {
+  display: block;
+  color: #7f7f7f;
+  font: 14px "open_sansregular", sans-serif;
+  padding: 12px 30px 13px 29px;
+  text-decoration: none;
+}
+
+.info {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.info__title {
+  color: #333333;
+  font: 20px "open_sansbold", sans-serif;
+  margin-bottom: 4px;
+}
+
+.info__main {
+  text-align: justify;
+}
+
+.info__text {
+  color: #333333;
+  font: 14px/20px "open_sansregular", sans-serif;
+  margin-bottom: 20px;
+}
+
+.column {
+  padding: 20px;
+}
+
+.accordeon {
+  background: #fbfbfb;
+  box-sizing: border-box;
+  border: 1px solid #dee1e4;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.accordeon__list {
+  margin: 0;
+  padding: 0;
+}
+
+.accordeon__item {
+  list-style: none;
+  padding: 11px 28px 20px;
+  border-bottom: 1px solid #dee1e4;
+}
+
+.accordeon__trigger {
+  display: block;
+  color: #333;
+  font: 16px "open_sanssemibold", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.show-accordeon {
+  position: relative;
+}
+.show-accordeon:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-position: 0 0;
+  width: 18px;
+  height: 11px;
+}
+
+.hide-accordeon {
+  position: relative;
+}
+.hide-accordeon:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-position: 0 -11px;
+  width: 18px;
+  height: 11px;
+}
+
+.list-radio {
+  margin: 0;
+  padding: 0;
+}
+
+.list-radio__item {
+  list-style: none;
+  margin-bottom: 18px;
+}
+.list-radio__item:last-child {
+  margin-bottom: 0;
+}
+
+.list-radio__label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.list-radio__input-radio-origin {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.list-radio__input-radio-fake {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+.list-radio__input-radio-origin + .list-radio__input-radio-fake {
+  background-position: 0 -171px;
+  width: 19px;
+  height: 19px;
+}
+
+.list-radio__input-radio-origin:checked + .list-radio__input-radio-fake {
+  background-position: 0 -152px;
+  width: 19px;
+  height: 19px;
+}
+
+.list-radio__item__title {
+  display: inline-block;
+  color: #333333;
+  font: 14px "open_sansregular", sans-serif;
+}
+
+.list-check {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+.list-check__item {
+  list-style: none;
+  margin-bottom: 18px;
+}
+.list-check__item:last-child {
+  margin-bottom: 0;
+}
+
+.list-check__label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.list-check__input-check-origin {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.list-check__input-check-fake {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+.list-check__input-check-origin + .list-check__input-check-fake {
+  background-position: 0 -41px;
+  width: 19px;
+  height: 19px;
+}
+
+.list-check__input-check-origin:checked + .list-check__input-check-fake {
+  background-position: 0 -22px;
+  width: 19px;
+  height: 19px;
+}
+
+.list-check__item__title {
+  display: inline-block;
+  color: #333333;
+  font: 14px "open_sansregular", sans-serif;
+}
+
+.accordeon__reset-filter {
+  color: #5db2fc;
+  font: 14px "open_sansregular", sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.price-fields {
+  margin-bottom: 18px;
+}
+
+.price-field_start {
+  float: left;
+}
+
+.price-field_end {
+  float: right;
+}
+
+.price-field__text {
+  color: #333;
+  font: 14px "open_sansregular", sans-serif;
+}
+
+.price-field__input {
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 2px 2px 0 #ebedef;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 83px;
+  padding: 6px 8px;
+  margin-left: 15px;
+}
+
+.slider-interval {
+  height: 15px;
+  position: relative;
+}
+
+.slider-interval__range {
+  height: 3px;
+  background: #dee1e4;
+}
+
+.slider-focus {
+  height: 3px;
+  background: #ff6600;
+  position: absolute;
+  top: 0;
+}
+
+.slider-interval__toggle_start-wrap {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.slider-interval__toggle_end-wrap {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.slider-interval__toggle {
+  position: absolute;
+  cursor: pointer;
+  background-position: 0 -262px;
+  width: 8px;
+  height: 14px;
+}
+
+.slider-interval__toggle_start {
+  left: -3px;
+}
+
+.slider-interval__toggle_end {
+  right: -3px;
+}
+
+.list-colors {
+  padding: 0;
+  margin-left: -22px;
+  font-size: 0;
+  padding-right: 60px;
+}
+
+.list-colors__item {
+  display: inline-block;
+  list-style: none;
+  margin: 0 0 22px 22px;
+}
+
+.list-colors__link {
+  border: 1px solid #dee1e4;
+  display: block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.list-colors__link:hover {
+  box-shadow: 0 0 0 2px  #ff6600;
+}
+
+.link-white {
+  background: #ffffff;
+}
+
+.link-grey {
+  background: #cccccc;
+}
+
+.link-black {
+  background: #000000;
+}
+
+.link-dark-blue {
+  background: #0a3153;
+}
+
+.link-red {
+  background: #ff1800;
+}
+
+.link-yellow {
+  background: #fff343;
+}
+
+.link-orange {
+  background: #fb914a;
+}
+
+.link-green {
+  background: #92c37c;
+}
+
+.link-blue {
+  background: #40a6ff;
+}
+
+.link-purple {
+  background: #9870ad;
+}
+
+.link-pink {
+  background: #dc78ad;
+}
+
+.link-brown {
+  background: #7f401d;
+}
+
+.hide-margin {
+  margin-bottom: 0;
+  -webkit-transition: margin .3s;
+  -moz-transition: margin .3s;
+  -ms-transition: margin .3s;
+  -o-transition: margin .3s;
+  transition: margin .3s;
+}
+
+.filters {
+  background: #e4ebee;
+  border: 1px solid #dee1e4;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  float: left;
+  margin-left: 22px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.filter__select {
+  display: none;
+}
+
+.select2 {
+  box-shadow: inset 0 1px 1px 0 rgba(148, 148, 148, 0.43);
+  font: 14px/20px "open_sanslight", sans-serif;
+  margin-left: 5px;
+}
+
+.filter-view {
+  float: right;
+}
+.filter-view .filter__title {
+  line-height: 51px;
+}
+
+.filter__title {
+  color: #5d656c;
+  font: 14px/20px "open_sansregular", sans-serif;
+}
+
+.view-list {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.view-list__item {
+  display: inline-block;
+  list-style: none;
+  border-left: 1px solid #dee1e4;
+}
+
+.view-list__link {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 19px 17px 16px;
+}
+
+.view-list__item_list-one .view-list__link:after {
+  content: "";
+  display: block;
+  background-position: 0 -88px;
+  width: 16px;
+  height: 16px;
+}
+
+.view-list__item_list-two .view-list__link:after {
+  content: "";
+  display: block;
+  background-position: 0 -120px;
+  width: 16px;
+  height: 16px;
+}
+
+.view-list__item_list-three .view-list__link:after {
+  content: "";
+  display: block;
+  background-position: 0 -104px;
+  width: 16px;
+  height: 16px;
+}
+
+.product-item {
+  background: #fbfbfb;
+  border: 1px solid #dee1e4;
+  border-bottom: none;
+  margin: 0;
+  margin-left: 19px;
+  overflow: hidden;
+  padding: 20px 25px 15px 22px;
+  position: relative;
+  min-height: 253px;
+}
+
+.product-item:hover {
+  z-index: 2;
+  box-shadow: 0 1px 5.7px 0.3px rgba(118, 118, 118, 0.75);
+}
+
+.product-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.product-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom: 1px solid #dee1e4;
+}
+
+.slider-product {
+  float: left;
+}
+
+.slider-product__wrap-main-img {
+  border: 1px solid #dee1e4;
+  overflow: hidden;
+  width: 134px;
+  margin-bottom: 15px;
+}
+
+.slider-product__main-img {
+  display: block;
+  width: 100%;
+}
+
+.slider-product__min {
+  margin-bottom: 8px;
+}
+
+.slider-product__min-list {
+  padding: 0;
+  font-size: 0;
+  margin: 0 0 -17px -17px;
+}
+
+.slider-product__min-list__item {
+  list-style: none;
+  display: inline-block;
+  border: 1px solid #dee1e4;
+  width: 32px;
+  margin: 0 0 17px 17px;
+  cursor: pointer;
+}
+
+.slider-product__min-list__item.active {
+  box-shadow: 0 0 0 2px  #ff6600;
+}
+
+.slider-product__min-list__item__img {
+  display: block;
+  width: 100%;
+}
+
+.vendor-product {
+  text-align: center;
+}
+
+.vendor-product__text {
+  color: #7f7f7f;
+  font: 12px "open_sanssemibold", sans-serif;
+}
+
+.vendor-product__value {
+  color: #333333;
+  font: 14px "open_sanssemibold", sans-serif;
+  margin-left: 3px;
+}
+
+.description-product {
+  margin-left: 25px;
+  float: left;
+  width: 405px;
+  position: relative;
+}
+
+.description-product__title {
+  color: #333;
+  font: 16px/7px "open_sansbold", sans-serif;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.description-product__text {
+  color: #333;
+  font: 14px/20px "open_sansregular", sans-serif;
+  margin-bottom: 13px;
+}
+
+.description-product__rating__list {
+  padding: 0;
+  font-size: 0;
+  margin-left: -4px;
+  display: inline-block;
+}
+
+.description-product__rating__item {
+  list-style: none;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.description-product__rating__link {
+  display: block;
+  background-position: 0 -231px;
+  width: 15px;
+  height: 15px;
+}
+
+.description-product__rating__item_active .description-product__rating__link {
+  background-position: 0 -216px;
+  width: 16px;
+  height: 15px;
+}
+
+.description-product__rating__value {
+  display: inline-block;
+  background: #b5beca;
+  border-radius: 6px;
+  color: #fff;
+  font: 11px "open_sanssemibold", sans-serif;
+  padding: 0 10px;
+  margin-left: 15px;
+}
+
+.purchase-product {
+  border-left: 1px solid #dee1e4;
+  position: absolute;
+  top: 19px;
+  bottom: 23px;
+  right: 0;
+  padding: 0 24px;
+}
+
+.purchase-product__price {
+  color: #333;
+  font: 20px/32px "open_sanssemibold", sans-serif;
+  margin-bottom: 122px;
+  text-align: right;
+}
+.purchase-product__price:after {
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+  background-position: 0 -202px;
+  width: 11px;
+  height: 14px;
+}
+
+.purchase-product__in-basket {
+  background: #ff6600;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font: 14px "open_sansbold", sans-serif;
+  height: 33px;
+  width: 103px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.purchase-product__wrap-availability {
+  text-align: right;
+}
+
+.purchase-product__availability {
+  color: #878787;
+  font: 12px/20px "open_sansbold", sans-serif;
+  text-align: right;
+  display: inline-block;
+  position: relative;
+}
+.purchase-product__availability:before {
+  content: "";
+  background: #60ac49;
+  border-radius: 50%;
+  display: block;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  left: -15px;
+  top: 6px;
+}
+
+.description-product__options {
+  display: none;
+}
+
+.products-list_list-view {
+  padding: 9px 14px 7px 12px;
+  margin-left: 19px;
+}
+.products-list_list-view .slider-product__wrap-main-img,
+.products-list_list-view .slider-product__min,
+.products-list_list-view .description-product__title,
+.products-list_list-view .description-product__rating {
+  display: none;
+}
+.products-list_list-view .description-product {
+  padding-top: 7px;
+  margin-left: 11px;
+  width: 300px;
+}
+.products-list_list-view .vendor-product {
+  padding-top: 7px;
+}
+.products-list_list-view .vendor-product__text,
+.products-list_list-view .vendor-product__value {
+  font-family: "open_sansbold";
+}
+.products-list_list-view .description-product__text {
+  line-height: normal;
+  margin: 0;
+}
+.products-list_list-view .purchase-product {
+  border-left: none;
+  position: relative;
+  float: left;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  width: 298px;
+}
+.products-list_list-view .purchase-product__price {
+  margin-bottom: 0;
+  text-align: left;
+  float: left;
+  font-size: 18px;
+}
+.products-list_list-view .purchase-product__price:after {
+  content: "";
+  display: inline-block;
+  margin-left: 5px;
+  background-position: 0 -190px;
+  width: 11px;
+  height: 12px;
+}
+.products-list_list-view .purchase-product__buy {
+  position: relative;
+  float: right;
+  top: 0;
+  left: 0;
+}
+.products-list_list-view .purchase-product__in-basket {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+.products-list_list-view .purchase-product__wrap-availability {
+  padding-top: 8px;
+  float: left;
+}
+
+.product-list {
+  margin: 0 0 -19px -19px;
+}
+
+.products-list_tile-view {
+  float: left;
+  width: 235px;
+  border-radius: 5px !important;
+  box-sizing: border-box;
+  margin: 0 0 19px 19px;
+  padding: 17px 10px;
+  border: 1px solid #dee1e4 !important;
+}
+.products-list_tile-view .slider-product {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.products-list_tile-view .slider-product__wrap-main-img,
+.products-list_tile-view .slider-product__min {
+  display: inline-block;
+}
+.products-list_tile-view .product-item__vendor {
+  display: none;
+}
+.products-list_tile-view .description-product {
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+}
+.products-list_tile-view .description-product__title {
+  font: 14px/20px "open_sanssemibold", sans-serif;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: -45px;
+}
+.products-list_tile-view .description-product__text {
+  display: none;
+}
+.products-list_tile-view .options-product {
+  display: block;
+}
+.products-list_tile-view .options-product__list {
+  padding: 0;
+}
+.products-list_tile-view .options-product__item {
+  list-style: none;
+  padding: 0 2px;
+}
+.products-list_tile-view .options-product__item:nth-child(odd) {
+  background: #e6e6e6;
+}
+.products-list_tile-view .options-product__item__inner {
+  color: #333333;
+  font: 14px/20px "open_sansregular", sans-serif;
+}
+.products-list_tile-view .options-product__item__parameter {
+  float: left;
+}
+.products-list_tile-view .options-product__item__value {
+  float: right;
+}
+.products-list_tile-view .description-product__rating {
+  text-align: center;
+}
+.products-list_tile-view .description-product__rating__list {
+  display: inline-block;
+}
+.products-list_tile-view .description-product__rating__value {
+  vertical-align: top;
+}
+.products-list_tile-view .purchase-product {
+  position: static;
+  border: none;
+  padding: 0;
+}
+.products-list_tile-view .purchase-product__price {
+  text-align: center;
+  margin-bottom: 0;
+}
+.products-list_tile-view .purchase-product__buy {
+  text-align: right;
+  position: relative;
+}
+.products-list_tile-view .purchase-product__in-basket {
+  display: inline-block;
+  margin-left: 40px;
+}
+.products-list_tile-view .purchase-product__wrap-availability {
+  text-align: left;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 24px;
+}
+
+.general {
+  margin-bottom: 30px;
+}
+
+.general__container {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-title {
+  color: #333;
+  text-align: left;
+  margin: 0;
+  font: 20px/1 "open_sansbold", sans-serif;
+  font-weight: bold;
+  margin-bottom: 31px;
+}
+
+.sidebar {
+  float: left;
+  width: 333px;
+}
+
+.main-content {
+  float: right;
+  width: 743px;
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  float: left;
+  padding-top: 70px;
+}
+
+.footer-logo__link {
+  display: block;
+  width: 238px;
+  text-decoration: none;
+}
+
+.footer-logo__img {
+  display: block;
+  width: 100%;
+}
+
+.footer-navigation {
+  display: block;
+}
+
+.footer-navigation__list {
+  padding: 0;
+  font-size: 0;
+}
+
+.footer-navigation__item {
+  list-style: none;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.footer-navigation__link {
+  color: #eaeaea;
+  font: 14px/36px "open_sansregular", sans-serif;
+  text-decoration: underline;
+}
+
+.footer-navigation__link:hover {
+  color: #ff6600;
+}
+
+.copyright {
+  text-align: center;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #494949;
+  height: 30px;
+}
+
+.copyright__text {
+  color: #eaeaea;
+  font: 12px/28px "open_sansregular", sans-serif;
+}
+
+.social-btn-footer__list {
+  padding: 0;
+  margin: 0;
+  margin-left: -15px;
+  padding-right: 5px;
+}
+
+.social-btn-footer {
+  font-size: 0;
+  margin-bottom: 35px;
+  display: block;
+}
+.social-btn-footer .facebook {
+  background-position: 0 -143px;
+  width: 43px;
+  height: 43px;
+}
+.social-btn-footer .facebook:hover, .social-btn-footer .facebook.fb-footer-hover {
+  background-position: 0 0;
+}
+.social-btn-footer .vk {
+  background-position: 0 -1219px;
+  width: 43px;
+  height: 43px;
+}
+.social-btn-footer .vk:hover, .social-btn-footer .vk.vk-footer-hover {
+  background-position: 0 -1076px;
+}
+.social-btn-footer .twitter {
+  background-position: 0 -681px;
+  width: 43px;
+  height: 43px;
+}
+.social-btn-footer .twitter:hover, .social-btn-footer .twitter.tw-footer-hover {
+  background-position: 0 -538px;
+}
+
+.social-btn-footer .facebook:hover {
+  background-position: 0 0;
+  width: 43px;
+  height: 43px;
+}
+.social-btn-footer .vk:hover {
+  background-position: 0 -1076px;
+  width: 43px;
+  height: 43px;
+}
+.social-btn-footer .twitter:hover {
+  background-position: 0 -538px;
+  width: 43px;
+  height: 43px;
+}
+
+.social-btn-footer__item {
+  list-style: none;
+  display: inline-block;
+  margin-left: 26px;
+}
+
+.social-btn-footer__link {
+  display: block;
+}
+
+.footer {
+  background: url("../img/footer.png") repeat;
+}
+
+.footer__container {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer__container__right {
+  float: right;
+  text-align: right;
+  padding-top: 35px;
+  width: 560px;
+}
+
+body {
+  background: #f4f4f4;
+}

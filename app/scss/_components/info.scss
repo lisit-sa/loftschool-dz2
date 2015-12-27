@@ -1,0 +1,22 @@
+.info {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.info__title {
+    color: #333333;
+    font: 20px "open_sansbold", sans-serif;
+    margin-bottom: 4px;
+}
+.info__main {
+    text-align: justify;
+}
+.info__text {
+    color: #333333;
+    font: 14px/20px "open_sansregular", sans-serif;
+    margin-bottom: 20px;
+}
+
+.column {
+    padding: 20px;
+}

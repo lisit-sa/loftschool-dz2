@@ -1,0 +1,18 @@
+@import "_components/logo-footer";
+@import "_components/footer-navigation";
+@import "_components/copyrighting";
+@import "_components/social-btn-footer";
+.footer{
+	background: url("../img/footer.png") repeat;
+}
+.footer__container{
+	width: 1100px;
+	margin: 0 auto;
+	position: relative;
+}
+.footer__container__right{
+	float: right;
+    text-align: right;
+    padding-top: 35px;
+    width: 560px;
+}

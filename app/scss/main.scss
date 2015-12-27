@@ -1,0 +1,16 @@
+@import "_helpers/clearfix";
+@import "_helpers/fonts";
+@import "_helpers/html-font";
+@import "_helpers/sprites";
+
+@import "_layout/normalize";
+@import "_layout/adjustment";
+
+
+@import "_components/header";
+@import "_components/general";
+@import "_components/footer";
+
+body {
+	background: #f4f4f4;
+}
