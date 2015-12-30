@@ -119,7 +119,7 @@ var inputRadio = (function(){
 		var listRadio = $this.closest('.list-radio');
 		var typeRadio = listRadio.find('input[type=radio]');
 
-		typeRadio.not(this).prop('checked', true)
+		typeRadio.not(this).prop('checked', false)
 	};
 
 	return {

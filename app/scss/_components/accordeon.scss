@@ -13,7 +13,8 @@
 }
 .accordeon__item {
     list-style: none;
-    padding: 11px 28px 20px;
+    padding: 11px 28px 28px;
+    padding-top: 16px;
     border-bottom: 1px solid #dee1e4;
 }
 .accordeon__trigger {
@@ -103,7 +104,7 @@
 }
 .list-check__item {
     list-style: none;
-    margin-bottom: 18px;
+    margin-bottom: 21px;
     &:last-child{
         margin-bottom: 0;
     }
@@ -144,6 +145,9 @@
     font: 14px "open_sansregular", sans-serif;
     text-decoration: underline;
     cursor: pointer;
+}
+.accordeon__item__select{
+    margin-bottom: -14px;
 }
 .price-fields {
     margin-bottom: 18px;
@@ -217,13 +221,14 @@
 .list-colors {
     padding: 0;
     margin-left: -22px;
+    margin-bottom: -30px;
     font-size: 0;
     padding-right: 60px;
 }
 .list-colors__item {
     display: inline-block;
     list-style: none;
-    margin: 0 0 22px 22px;
+    margin: 0 0 24px 24px;
 }
 .list-colors__link {
     border: 1px solid #dee1e4;
