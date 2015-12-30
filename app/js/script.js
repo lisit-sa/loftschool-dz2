@@ -238,17 +238,17 @@ $("input#maxCost").change(function(){
 
 /*---------------Слайдшоу-------------*/
 
-_slider = (function() {
+slider = (function() {
 
-  _changeSlide = function(img) {
+  _changeImg = function(img) {
 
     var block = img.closest('.product-item__slider');
     var path = $(img).attr('href');
-    var show = block.find('.slider-product__main-img');
+    var slideShow = block.find('.slider-product__main-img');
 
 
-    return display.fadeOut(function() {
-      $(this).attr('src', show).fadeIn();
+    return slideShow.fadeOut(function() {
+      $(this).attr('src', path).fadeIn();
     });
   };
   return {
@@ -256,9 +256,9 @@ _slider = (function() {
       return $('.slider-product__min-list a').on('click', function(event) {
         event.preventDefault();
         var img = $(this);
-        return _changeSlide(img);
+        return _changeImg(img);
       });
     }
   };
 })();
-_slider.init();
+slider.init();
