@@ -8,8 +8,8 @@ var setColumn = (function(){
 		_column();
 	};
 /*---------Подключаем плагин columnizer-------*/
-	var _column = function(){
-		$('.info__main').columnize({ width: 523 });
+var _column = function(){
+		$('.info__main').columnize({ columns: 2 });
 	};
 
 	return {
@@ -236,21 +236,6 @@ $("input#maxCost").change(function(){
 });
 
 
-
-
-// $(document).ready(function(){
-
-// 	$(".slider-product__min-list a").click(function(event){
-// 		event.preventDefault();
-// 		var largePath = $(this).attr("href");
-// 		var largeAlt = $(this).attr("title");
-		
-// 		$(".slider-product__main-img").attr({ src: largePath, alt: largeAlt });
-		
-// 	});
-	
-// });
-
 /*---------------Слайдшоу-------------*/
 
 slideShow = (function() {
@@ -258,21 +243,19 @@ slideShow = (function() {
   _changeSlide = function(slide) {
 
     var container = slide.closest('.product-item__slider');
-    var path = slide.find('img').attr('src');
+    var path = $(slide).attr('href');
     var display = container.find('.slider-product__main-img');
 
-    slide.closest('.slider-product__min-list__item').addClass('active').siblings().removeClass('active');
 
     return display.fadeOut(function() {
-      return $(this).attr('src', path).fadeIn();
+      $(this).attr('src', path).fadeIn();
     });
   };
   return {
     init: function() {
-      return $('.products__slideshow-link').on('click', function(event) {
-        var slide;
+      return $('.slider-product__min-list a').on('click', function(event) {
         event.preventDefault();
-        slide = $(this);
+        var slide = $(this);
         return _changeSlide(slide);
       });
     }

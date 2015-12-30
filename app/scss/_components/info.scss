@@ -1,3 +1,7 @@
+.info__container{
+    width: 1100px;
+    margin: 0 auto;
+}
 .info {
     width: 1100px;
     margin: 0 auto;
@@ -18,5 +22,8 @@
 }
 
 .column {
-    padding: 20px;
+    padding-right: 30px;
+}
+.last {
+  padding-right: 0;
 }

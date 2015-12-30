@@ -29,12 +29,14 @@
 .slider-product__wrap-main-img {
     border: 1px solid #dee1e4;
     overflow: hidden;
-    width: 134px;
+    width: 135px;
+    height: 135px;
     margin-bottom: 15px;
 }
 .slider-product__main-img {
     display: block;
-    width: 100%;
+    margin-left: 18px;
+    margin-top: 5px;
 }
 .slider-product__min {
     margin-bottom: 8px;

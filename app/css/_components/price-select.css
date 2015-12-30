@@ -1,0 +1,35 @@
+.price-select {
+  margin-bottom: 38px;
+}
+
+.price-select__list {
+  background: #fbfbfb;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #dee1e4;
+  border-radius: 5px;
+}
+
+.price-select__item {
+  list-style: none;
+  border-bottom: 1px solid #dee1e4;
+}
+.price-select__item:last-child {
+  border-bottom: none;
+}
+.price-select__item_active {
+  color: #5d656c;
+  background-color: #d9e5ea;
+}
+.price-select__item:hover {
+  color: #5d656c;
+  background-color: #d9e5ea;
+}
+
+.price-select__link {
+  display: block;
+  color: #7f7f7f;
+  font: 14px "open_sansregular", sans-serif;
+  padding: 12px 30px 13px 29px;
+  text-decoration: none;
+}

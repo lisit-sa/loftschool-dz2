@@ -1,0 +1,24 @@
+.footer-navigation {
+  display: block;
+}
+
+.footer-navigation__list {
+  padding: 0;
+  font-size: 0;
+}
+
+.footer-navigation__item {
+  list-style: none;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.footer-navigation__link {
+  color: #eaeaea;
+  font: 14px/36px "open_sansregular", sans-serif;
+  text-decoration: underline;
+}
+
+.footer-navigation__link:hover {
+  color: #ff6600;
+}

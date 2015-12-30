@@ -5,18 +5,18 @@ mixin products-list(products)
          div.product-item
             div.product-item__slider.slider-product
                div.slider-product__wrap-main-img
-                  img(src="img/#{product.mainImg}").slider-product__main-img
+                  img(src="img/#{product.mainImg}" width="93" height="123").slider-product__main-img
                div.slider-product__min
                   ul.slider-product__min-list
                      li.slider-product__min-list__item
                         a(href="img/#{product.img_one}").products__slideshow-link
-                           img(src="img/#{product.img_min_one}").slider-product__min-list__item__img
+                           img(src="img/#{product.img_min_one}" width="20" height="28").slider-product__min-list__item__img
                      li.slider-product__min-list__item
                         a(href="img/#{product.img_two}").products__slideshow-link
-                           img(src="img/#{product.img_min_two}").slider-product__min-list__item__img
+                           img(src="img/#{product.img_min_two}" width="20" height="28").slider-product__min-list__item__img
                      li.slider-product__min-list__item
                         a(href="img/#{product.img_three}").products__slideshow-link
-                           img(src="img/#{product.img_min_three}").slider-product__min-list__item__img
+                           img(src="img/#{product.img_min_three}" width="20" height="28").slider-product__min-list__item__img
                div.product-item__vendor.vendor-product
                   span.vendor-product__text Артикул 
                   span.vendor-product__value= product.vendorValue
