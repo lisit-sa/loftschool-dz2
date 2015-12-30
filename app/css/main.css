@@ -765,7 +765,7 @@ footer {
   background: #7f401d;
 }
 
-.hide-margin {
+.hide__trigger {
   margin-bottom: 0;
   -webkit-transition: margin .3s;
   -moz-transition: margin .3s;

@@ -61,21 +61,21 @@ var accordeon = (function() {
 
 	var _setUpListners = function(){
 		var trigger = $('.accordeon__trigger');
-		trigger.on('click', _itemToggle); 
-		trigger.on('hover', _viewArrow);
+		trigger.on('click', _itemHide); 
+		trigger.on('mouseover', _viewArrow);
 		trigger.on('mouseleave', _removeArrow);
 	};
 
 /*--------Добавляем класс hide-margin, при помощи которого двигается аккордеон--------*/
-	var _itemToggle = function(){
+	var _itemHide = function(){
 		var $this = $(this);
 
-		$this.toggleClass('hide-margin');
+		$this.toggleClass('hide__trigger');
 
 		var _accordeonItem = $this.closest('.accordeon__item');
 		var _accordeonHide = _accordeonItem.find('.accordeon__item__select');
 
-		_accordeonHide.slideToggle();
+		_accordeonHide.slideToggle(); //переключение видимости элемента .accordeon__trigger
 	};
 /*----------Убираем стрелочки вверх-вниз при убирании мышки с аккордеона-----------*/
 	var _removeArrow = function() {
@@ -89,9 +89,9 @@ var accordeon = (function() {
 		var _accordeonHide = _accordeonItem.find('.accordeon__item__select');
 
 		if(_accordeonHide.is(':visible')) {
-			$this.removeClass('show-accordeon').addClass('hide-accordeon')
+			$this.removeClass('show-accordeon').addClass('hide-accordeon');
 		} else {
-			$this.removeClass('hide-accordeon').addClass('show-accordeon')
+			$this.removeClass('hide-accordeon').addClass('show-accordeon');
 		}
 
 	};
@@ -119,7 +119,7 @@ var inputRadio = (function(){
 		var listRadio = $this.closest('.list-radio');
 		var typeRadio = listRadio.find('input[type=radio]');
 
-		typeRadio.not(this).prop('checked', false)
+		typeRadio.not(this).prop('checked', true)
 	};
 
 	return {
