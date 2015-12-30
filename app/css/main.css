@@ -52,6 +52,7 @@ ul {
 
 .wrapper {
   min-height: 100%;
+  min-width: 1120px;
   overflow: hidden;
   position: relative;
 }
@@ -136,10 +137,11 @@ footer {
   color: #333333;
   float: right;
   font: 14px/24px "open_sansregular", sans-serif;
-  margin-left: 20px;
+  right: 120px;
+  margin-right: 145px;
   margin-top: 0;
   margin-bottom: 0;
-  position: relative;
+  position: absolute;
 }
 .address:after {
   display: inline-block;
@@ -198,8 +200,9 @@ footer {
 }
 
 .search {
-  float: right;
+  float: left;
   font-size: 0;
+  margin-left: 55px;
 }
 
 .search__field {
@@ -247,6 +250,9 @@ footer {
 .menu__item {
   display: inline-block;
   margin-left: 38px;
+}
+.menu__item:first-child {
+  margin-left: 0;
 }
 
 .menu__link {
@@ -434,11 +440,11 @@ footer {
 .info__main {
   text-align: justify;
 }
-
-.info__text {
+.info__main p {
   color: #333333;
   font: 14px/20px "open_sansregular", sans-serif;
   margin-bottom: 20px;
+  text-indent: 35px;
 }
 
 .column {
@@ -614,10 +620,6 @@ footer {
   cursor: pointer;
 }
 
-.accordeon__item__select {
-  margin-bottom: -14px;
-}
-
 .price-fields {
   margin-bottom: 18px;
 }
@@ -685,6 +687,12 @@ footer {
 .ui-slider-horizontal .ui-slider-handle {
   top: -5px;
   margin-left: -6px;
+}
+.ui-slider-horizontal .ui-slider-handle:active {
+  outline: none;
+}
+.ui-slider-horizontal .ui-slider-handle:focus {
+  outline: none;
 }
 
 .ui-slider .ui-slider-handle {
@@ -1356,6 +1364,7 @@ footer {
   right: 0;
   border-top: 1px solid #494949;
   height: 30px;
+  position: relative;
 }
 
 .copyright__text {

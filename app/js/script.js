@@ -75,7 +75,7 @@ var accordeon = (function() {
 		var _accordeonItem = $this.closest('.accordeon__item');
 		var _accordeonHide = _accordeonItem.find('.accordeon__item__select');
 
-		_accordeonHide.slideToggle(); //переключение видимости элемента .accordeon__trigger
+		_accordeonHide.stop(true, true).slideToggle(); //переключение видимости элемента .accordeon__trigger
 	};
 /*----------Убираем стрелочки вверх-вниз при убирании мышки с аккордеона-----------*/
 	var _removeArrow = function() {

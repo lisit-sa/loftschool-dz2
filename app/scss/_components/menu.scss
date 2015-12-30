@@ -11,7 +11,9 @@
 .menu__item {
     display: inline-block;
     margin-left: 38px;
-
+    &:first-child{
+        margin-left: 0;
+    }
 }
 .menu__link {
     color: #333333;

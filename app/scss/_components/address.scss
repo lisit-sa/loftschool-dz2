@@ -4,10 +4,11 @@
     color: #333333;
     float: right;
     font: 14px/24px "open_sansregular", sans-serif;
-    margin-left: 20px;
+    right: 120px;
+    margin-right: 145px;
     margin-top: 0;
     margin-bottom: 0;
-    position: relative;
+    position: absolute;
 
     &:after {
         display: inline-block;
