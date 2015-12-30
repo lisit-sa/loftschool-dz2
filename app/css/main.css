@@ -923,6 +923,9 @@ footer {
   margin: 0 0 17px 17px;
   cursor: pointer;
 }
+.slider-product__min-list__item:hover {
+  border: 1px solid #ff6600;
+}
 
 .slider-product__min-list__item.active {
   box-shadow: 0 0 0 2px  #ff6600;
