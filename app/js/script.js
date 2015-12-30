@@ -1,4 +1,4 @@
-/*--------Columnizer------*/
+/*--------Разбиваем информационный блок на колонки------*/
 var setColumn = (function(){
 	var init = function(){
 		_setUpListners();
@@ -7,7 +7,7 @@ var setColumn = (function(){
 	var _setUpListners = function(){
 		_column();
 	};
-
+/*---------Подключаем плагин columnizer-------*/
 	var _column = function(){
 		$('.info__main').columnize({ width: 523 });
 	};
@@ -20,7 +20,7 @@ var setColumn = (function(){
 setColumn.init();
 
 
-/*--------Сброс чекбоксов---------*/
+/*--------Сброс чекбоксов (по нажатию на кнопку "сбросить фильтр" убирается атрибут checked---------*/
 var resetFilter = (function(){
 	$('.accordeon__reset-filter').click(function(event){
 	event.preventDefault();
@@ -29,31 +29,31 @@ var resetFilter = (function(){
 })();
 
 
-/*-------Select - выпадающий список с выбором------*/
-// var setSelect = (function(){
-// 	var init = function(){
-// 		_setUpListners();
-// 	};
+/*-------Стилизуем Select - выпадающий список с выбором------*/
+var setSelect = (function(){
+	var init = function(){
+		_setUpListners();
+	};
 
-// 	var _setUpListners = function(){
-// 		_select();
-// 	};
+	var _setUpListners = function(){
+		_select();
+	};
+/*--------Подключаем плагин Formstyler-------*/
+	var _select = function(){
+		$('.filter__select').styler();
+	};
 
-// 	var _select = function(){
-// 		$('.filter__select').styler();
-// 	};
+	return {
+		init: init
+	};
+})();
 
-// 	return {
-// 		init: init
-// 	};
-// })();
-
-// setSelect.init();
+setSelect.init();
 
 
 
-//***************************Accordeon toggle************************
-var accordeonToggle = (function() {
+/*---------Создаем аккордеон----------*/
+var accordeon = (function() {
 
 	var init = function(){
 		_setUpListners();
@@ -61,12 +61,12 @@ var accordeonToggle = (function() {
 
 	var _setUpListners = function(){
 		var trigger = $('.accordeon__trigger');
-		trigger.on('click', _itemToggle);
+		trigger.on('click', _itemToggle); 
 		trigger.on('hover', _viewArrow);
 		trigger.on('mouseleave', _removeArrow);
 	};
 
-
+/*--------Добавляем класс hide-margin, при помощи которого двигается аккордеон--------*/
 	var _itemToggle = function(){
 		var $this = $(this);
 
@@ -77,9 +77,11 @@ var accordeonToggle = (function() {
 
 		_accordeonHide.slideToggle();
 	};
+/*----------Убираем стрелочки вверх-вниз при убирании мышки с аккордеона-----------*/
 	var _removeArrow = function() {
 		$(this).removeClass('hide-accordeon').removeClass('show-accordeon')
 	};
+/*--------При наведении на аккордеон появляются стрелочки вверх и вниз-------*/
 	var _viewArrow = function(){
 		var $this = $(this);
 
@@ -87,18 +89,10 @@ var accordeonToggle = (function() {
 		var _accordeonHide = _accordeonItem.find('.accordeon__item__select');
 
 		if(_accordeonHide.is(':visible')) {
-			console.log('visible');
-
-			//var currentTrigger = $(this).closest('.accordeon__item').find('.accordeon__trigger');
-
 			$this.removeClass('show-accordeon').addClass('hide-accordeon')
 		} else {
-			console.log('hidden');
-
 			$this.removeClass('hide-accordeon').addClass('show-accordeon')
 		}
-
-	
 
 	};
 	return {
@@ -107,24 +101,25 @@ var accordeonToggle = (function() {
 
 })();
 
-accordeonToggle.init();
+accordeon.init();
 
-var oneRadio = (function(){
+/*-----------Создаем радио-инпуты-----------*/
+var inputRadio = (function(){
 	var init = function(){
 		_setUpListners();
 	};
 
 	var _setUpListners = function(){
-		$('.list-radio__input-radio-origin').on('change', _unselect);
+		$('.list-radio__input-radio-origin').on('change', _radioselect);
 	};
 
-	var _unselect = function(){
+	var _radioselect = function(){
 		var $this = $(this);
 
-		var parentRadio = $this.closest('.list-radio');
-		var otherRadio = parentRadio.find('input[type=radio]');
+		var listRadio = $this.closest('.list-radio');
+		var typeRadio = listRadio.find('input[type=radio]');
 
-		otherRadio.not(this).prop('checked', false)
+		typeRadio.not(this).prop('checked', false)
 	};
 
 	return {
@@ -132,15 +127,155 @@ var oneRadio = (function(){
 	};
 })();
 
-oneRadio.init();
+inputRadio.init();
+
+/*-----------Смена отображения товаров-----------*/
+var changeView = (function(){
+	var init = function(){
+		_setUpListners();
+	};
 
 
-var changeListOne = $('.view-list__item_list-two'),
-    _viewListOne = $('.product__list');
+	var _setUpListners = function(){
+		$('.view-list__link').on('click', _addClass);
+		_setOneView();
+	};
 
-changeListOne.on('click', function() {
-  
-  _viewListOne
-  .removeClass()
-  .addClass('products-list_list-view');
+	var _setOneView = function(){
+		$('.view-list__item_list-one')
+			.closest('.view-list__item')
+			.addClass('active');
+	};
+
+	var _addClass = function(event){
+		event.preventDefault();
+
+		var $this = $(this);
+
+		var itemProduct = $('.product-item');
+
+		var listItem = $this.closest('.view-list__item');
+/*--------После добавления определeнных классов, заданных в css, меняется отображение---------*/
+		if(listItem.hasClass('view-list__item_list-one')){
+			listItem.addClass('active');
+			$('.view-list__item').not(listItem).removeClass('active');
+
+			itemProduct.each( function(){
+				$(this).removeClass('products-list_tile-view products-list_list-view');
+			} );
+		}else if(listItem.hasClass('view-list__item_list-two')){
+			listItem.addClass('active');
+			$('.view-list__item').not(listItem).removeClass('active');
+
+			itemProduct.each( function(){
+				$(this).removeClass('products-list_list-view')
+					.addClass('products-list_tile-view');
+			} );
+		} else if(listItem.hasClass('view-list__item_list-three')){
+			listItem.addClass('active');
+			$('.view-list__item').not(listItem).removeClass('active');
+
+			itemProduct.each( function(){
+				$(this).removeClass('products-list_tile-view')
+					.addClass('products-list_list-view');
+			} );
+		}
+  };
+
+	return {
+		init: init
+	};
+})();
+
+changeView.init();
+
+/*--------------Слайдер цен------------------*/
+$(document).ready(function(){
+$("#slider").slider({
+	min: 0,
+	max: 26000,
+	values: [0,26000],
+	range: true,
+	stop: function(event, ui) {
+		$("input#minCost").val($("#slider").slider("values",0));
+		$("input#maxCost").val($("#slider").slider("values",1));
+		
+    },
+    slide: function(event, ui){
+		$("input#minCost").val($("#slider").slider("values",0));
+		$("input#maxCost").val($("#slider").slider("values",1));
+    }
 });
+
+$("input#minCost").change(function(){
+
+	var value1=$("input#minCost").val();
+	var value2=$("input#maxCost").val();
+
+    if(parseInt(value1) > parseInt(value2)){
+		value1 = value2;
+		$("input#minCost").val(value1);
+	}
+	$("#slider").slider("values",0,value1);	
+});
+
+	
+$("input#maxCost").change(function(){
+		
+	var value1=$("input#minCost").val();
+	var value2=$("input#maxCost").val();
+	
+	if (value2 > 26000) { value2 = 26000; $("input#maxCost").val(26000)}
+
+	if(parseInt(value1) > parseInt(value2)){
+		value2 = value1;
+		$("input#maxCost").val(value2);
+	}
+	$("#slider").slider("values",1,value2);
+});
+});
+
+
+
+
+// $(document).ready(function(){
+
+// 	$(".slider-product__min-list a").click(function(event){
+// 		event.preventDefault();
+// 		var largePath = $(this).attr("href");
+// 		var largeAlt = $(this).attr("title");
+		
+// 		$(".slider-product__main-img").attr({ src: largePath, alt: largeAlt });
+		
+// 	});
+	
+// });
+
+/*---------------Слайдшоу-------------*/
+
+slideShow = (function() {
+
+  _changeSlide = function(slide) {
+
+    var container = slide.closest('.product-item__slider');
+    var path = slide.find('img').attr('src');
+    var display = container.find('.slider-product__main-img');
+
+    slide.closest('.slider-product__min-list__item').addClass('active').siblings().removeClass('active');
+
+    return display.fadeOut(function() {
+      return $(this).attr('src', path).fadeIn();
+    });
+  };
+  return {
+    init: function() {
+      return $('.products__slideshow-link').on('click', function(event) {
+        var slide;
+        event.preventDefault();
+        slide = $(this);
+        return _changeSlide(slide);
+      });
+    }
+  };
+})();
+slideShow.init();

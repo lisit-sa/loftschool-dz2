@@ -31,16 +31,12 @@ div.accordeon
             div.price-fields.price-slider.clearfix
                div.price-field.price-field_start
                   span.price-field__text от
-                  input(type="text", value="0").price-field__input
+                  input(type="text", value="0")#minCost.price-field__input
                div.price-field.price-field_end
                   span.price-field__text до
-                  input(type="text", value="26000").price-field__input
+                  input(type="text", value="26000")#maxCost.price-field__input
             div.slider-interval
-               div.slider-interval__range
-               div.slider-interval__toggle_start-wrap.slider-focus
-                  div.slider-interval__toggle.slider-interval__toggle_start
-               div.slider-interval__toggle_end-wrap.slider-focus
-                  div.slider-interval__toggle.slider-interval__toggle_end
+               div#slider.slider-interval__range
 
       li.accordeon__item
          a.accordeon__trigger Цвет

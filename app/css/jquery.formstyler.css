@@ -283,7 +283,14 @@
 	width: 34px;
 	height: 100%;
 }
+.jq-selectbox__trigger:after{
+	position: absolute;
+	content: url("../img/icons/down.png");
+	height: 9px;
+	width: 13px;
+}
 .jq-selectbox__trigger-arrow {
+	display: none;
 	position: absolute;
 	top: 14px;
 	right: 12px;

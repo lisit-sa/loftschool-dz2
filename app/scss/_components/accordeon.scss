@@ -1,5 +1,4 @@
-@import "icons/*.png";
-
+@import "_helpers/sprites";
 .accordeon {
     background: #fbfbfb;
     box-sizing: border-box;
@@ -169,43 +168,50 @@
     padding: 6px 8px;
     margin-left: 15px;
 }
+#slider{
+    width: 275px;
+}
 .slider-interval {
     height: 15px;
     position: relative;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
 }
 .slider-interval__range {
     height: 3px;
     background: #dee1e4;
 }
-.slider-focus{
-    height: 3px;
-    background: #ff6600;
-    position: absolute;
-    top: 0;
-}
-.slider-interval__toggle_start-wrap {
-    display: inline-block;
+.ui-slider {
     position: relative;
-    vertical-align: top;
 }
-.slider-interval__toggle_end-wrap {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-}
-
-.slider-interval__toggle {
+.ui-slider-range{
     position: absolute;
-    cursor: pointer;
-    @include icons-sprite(toggle);
-    width: icons-sprite-width(toggle);
-    height: icons-sprite-height(toggle);
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    overflow: hidden;
 }
-.slider-interval__toggle_start {
-    left: -3px;
+.ui-widget-header{
+    background: red;
 }
-.slider-interval__toggle_end {
-    right: -3px;
+.ui-slider-horizontal {
+    .ui-slider-handle {
+        top: -5px;
+        margin-left: -6px;
+    }
+}
+.ui-slider {
+    .ui-slider-handle{
+        position: absolute;
+        z-index: 2;
+        @include icons-sprite(toggle);
+        width: icons-sprite-width(toggle);
+        height: icons-sprite-height(toggle);
+        cursor: pointer;
+    }
 }
 .list-colors {
     padding: 0;

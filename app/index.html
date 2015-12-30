@@ -8,11 +8,13 @@
     <meta name="description" content="Описание моего сайта">
     <meta name="keywords" content="Ключевые слова моего сайта">
     <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="bower/normalize-css/normalize.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css"><!--[if lt IE 9]>
-    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="bower/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
   </head>
   <body>
@@ -153,20 +155,14 @@
                     <div class="accordeon__item__select">
                       <div class="price-fields price-slider clearfix">
                         <div class="price-field price-field_start"><span class="price-field__text">от</span>
-                          <input type="text" value="0" class="price-field__input">
+                          <input type="text" value="0" id="minCost" class="price-field__input">
                         </div>
                         <div class="price-field price-field_end"><span class="price-field__text">до</span>
-                          <input type="text" value="26000" class="price-field__input">
+                          <input type="text" value="26000" id="maxCost" class="price-field__input">
                         </div>
                       </div>
                       <div class="slider-interval">
-                        <div class="slider-interval__range"></div>
-                        <div class="slider-interval__toggle_start-wrap slider-focus">
-                          <div class="slider-interval__toggle slider-interval__toggle_start"></div>
-                        </div>
-                        <div class="slider-interval__toggle_end-wrap slider-focus">
-                          <div class="slider-interval__toggle slider-interval__toggle_end"></div>
-                        </div>
+                        <div id="slider" class="slider-interval__range"></div>
                       </div>
                     </div>
                   </li>
@@ -249,7 +245,7 @@
                 </div>
               </div>
                             <div class="product-list clearfix">
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/galaxys3.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -307,7 +303,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/lumia640-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -365,7 +361,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/archos50-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -423,7 +419,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/philipss398-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -481,7 +477,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/lumia430-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -539,7 +535,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/senseit-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -597,7 +593,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/hichscreen-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -655,7 +651,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/alcatel-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -713,7 +709,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="product-item clearfix">
+                              <div class="product-item">
                                 <div class="product-item__slider slider-product">
                                   <div class="slider-product__wrap-main-img"><img src="img/fly-1.jpg" class="slider-product__main-img"></div>
                                   <div class="slider-product__min">
@@ -830,9 +826,10 @@
       </div>
     </footer>
     <script src="bower/jquery/dist/jquery.js"></script>
-    <script src="bower/select2/dist/js/select2.js"></script>
     <script src="bower/jquery-placeholder/jquery-placeholder.js"></script>
+    <script src="jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="bower/jquery.columnizer/src/jquery.columnizer.js"></script>
+    <script src="js/jquery.ui.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

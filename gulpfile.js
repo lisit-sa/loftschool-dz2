@@ -1,55 +1,87 @@
-'use strict';
+/* -------- плагины ------- */
 
-var gulp = require("gulp"),
-	wiredep = require('wiredep').stream,
-    browserSync = require('browser-sync'),
-    jade = require('jade');
+var
+    gulp        = require('gulp'),
+    compass     = require('gulp-compass'),
+    jade        = require('gulp-jade'),
+    browserSync = require('browser-sync').create(),
+    plumber     = require('gulp-plumber');
 
-// Следим за bower
-	gulp.task('wiredep', function () {
-	  gulp.src('app/*.html')
-	    .pipe(wiredep())
-	    .pipe(gulp.dest('app/'))
-	});
+/* --------- пути --------- */
 
-var jadePath = './app/jade/*.jade';
+var
+    paths = {
+        jade : {
+            location    : 'app/jade/**/*.jade',
+            compiled    : 'app/jade/*.jade',
+            destination : 'app/jade'
+        },
 
-gulp.task('jade', function() {
-  var YOUR_LOCALS = {};
- 
-  gulp.src(jadePath)
-    .pipe(jade({
-      locals: YOUR_LOCALS,
-      pretty: '\t',
-    }))
-    .pipe(gulp.dest('./app'))
+        scss : {
+            location    : 'app/scss/**/*.scss',
+            entryPoint  : 'app/css/main.css'
+        },
+
+        compass : {
+            configFile  : 'config.rb',
+            cssFolder   : 'app/css',
+            scssFolder  : 'app/scss',
+            imgFolder   : 'app/img'
+        },
+
+        browserSync : {
+            baseDir : 'app',
+            watchPaths : ['index.html', 'css/*.css', 'js/*.js']
+        }
+    };
+
+/* --------- jade компиляция и пламбер--------- */
+gulp.task('jade', function(){
+    gulp.src(paths.jade.compiled)
+        .pipe(plumber())
+        .pipe(jade({pretty: true}))
+        .pipe(gulp.dest(paths.jade.destination))
 });
 
-// Слежка
-gulp.task('watch', function () {
-  gulp.watch([
-    'app/*.html',
-    'app/js/**/*.js',
-    'app/css/**/*.css'
-  ]).on('change', browserSync.reload);
-  gulp.watch('bower.json', ['wiredep']);
+/* --------- scss-compass --------- */
+
+gulp.task('compass', function() {
+    gulp.src(paths.scss.location)
+        .pipe(plumber())
+        .pipe(compass({
+            config_file: paths.compass.configFile,
+            css: paths.compass.cssFolder,
+            sass: paths.compass.scssFolder,
+            image: paths.compass.imgFolder
+        }));
 });
 
-gulp.task('watch', function(){
-	gulp.watch('jadePath', ['jade']);
+/* --------- browser sync --------- */
+
+gulp.task('sync', function() {
+    browserSync.init({
+        notify: false,
+        port: 9000,
+        server: {
+            baseDir: paths.browserSync.baseDir
+        }
+    });
 });
 
-// Переносим HTML, CSS, JS в папку dist 
-	gulp.task('useref', function () {
-	  return gulp.src('app/*.html')
-	    .pipe(useref())
-	    .pipe(gulpif('*.js', uglify()))
-	    .pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
-	    .pipe(gulp.dest('dist'));
-	});
 
-	// Очистка
-		gulp.task('clean', function() {
-			return gulp.src('dist', { read: false }) 
-		  	.pipe(rimraf());
-		});
+/* --------- слежка --------- */
+
+gulp.task("watch", function () {
+    gulp.watch(paths.jade.location, ['jade']);
+    gulp.watch(paths.scss.location, ['compass']);
+    gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
+    gulp.watch([
+        "app/*.html",
+        "app/css/*.css",
+        "app/js/*.js"
+    ]).on("change", browserSync.reload);
+});
+
+/* --------- итог --------- */
+
+gulp.task('default', ['jade', 'compass', 'sync', 'watch']);

@@ -2,15 +2,21 @@ mixin products-list(products)
    div.product-list.clearfix
       each product in products
          - var product = product
-         div.product-item.clearfix
+         div.product-item
             div.product-item__slider.slider-product
                div.slider-product__wrap-main-img
                   img(src="img/#{product.mainImg}").slider-product__main-img
                div.slider-product__min
                   ul.slider-product__min-list
-                     each img in product.minImg
-                        li.slider-product__min-list__item
-                           img(src="img/#{img}").slider-product__min-list__item__img
+                     li.slider-product__min-list__item
+                        a(href="img/#{product.img_one}").products__slideshow-link
+                           img(src="img/#{product.img_min_one}").slider-product__min-list__item__img
+                     li.slider-product__min-list__item
+                        a(href="img/#{product.img_two}").products__slideshow-link
+                           img(src="img/#{product.img_min_two}").slider-product__min-list__item__img
+                     li.slider-product__min-list__item
+                        a(href="img/#{product.img_three}").products__slideshow-link
+                           img(src="img/#{product.img_min_three}").slider-product__min-list__item__img
                div.product-item__vendor.vendor-product
                   span.vendor-product__text Артикул 
                   span.vendor-product__value= product.vendorValue

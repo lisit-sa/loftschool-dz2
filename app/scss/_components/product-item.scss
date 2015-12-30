@@ -1,5 +1,4 @@
-@import "icons/*.png";
-
+@charset "utf-8";
 .product-item {
     background: #fbfbfb;
     border: 1px solid #dee1e4;
@@ -187,87 +186,21 @@
 
 // второй вид продуктов
 
-.products-list_list-view {
-    padding: 9px 14px 7px 12px;
-    margin-left: 19px;
-    .slider-product__wrap-main-img,
-    .slider-product__min,
-    .description-product__title,
-    .description-product__rating{
-        display: none;
-    }
-
-    .description-product {
-        padding-top: 7px;
-        margin-left: 11px;
-        width: 300px;
-    }
-    .vendor-product {
-        padding-top: 7px;
-    }
-    .vendor-product__text,
-    .vendor-product__value{
-        font-family: "open_sansbold";
-    }
-    .description-product__text {
-        line-height: normal;
-        margin: 0;
-    }
-    .purchase-product {
-        border-left: none;
-        position: relative;
-        float: left;
-        top: 0;
-        bottom: 0;
-        padding: 0;
-        width: 298px;
-    }
-    .purchase-product__price {
-        margin-bottom: 0;
-        text-align: left;
-        float: left;
-        font-size: 18px;
-
-        &:after {
-            content: "";
-            display: inline-block;
-            margin-left: 5px;
-            @include icons-sprite(rub-list);
-            width: icons-sprite-width(rub-list);
-            height: icons-sprite-height(rub-list);
-        }
-    }
-    
-    .purchase-product__buy {
-        position: relative;
-        float: right;
-        top: 0;
-        left: 0;
-    }
-    .purchase-product__in-basket {
-        margin-left: 20px;
-        margin-bottom: 0;
-    }
-    .purchase-product__wrap-availability {
-        padding-top: 8px;
-        float: left;
-    }
-}
-// третий вид продуктов
-
 .product-list {
-    margin: 0 0 -19px -19px;
+    margin: 0 0 47px -16px;
 }
-
 .products-list_tile-view {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     width: 235px;
     border-radius: 5px !important;
     box-sizing: border-box;
-    margin: 0 0 19px 19px;
+    margin: 0 0 20px 15px;
     padding: 17px 10px;
     border: 1px solid #dee1e4 !important;
-
+    .product-item {
+        min-height: 53px !important;
+    }
     .slider-product {
         text-align: center;
         margin-bottom: 24px;
@@ -353,3 +286,85 @@
     }
 }
 
+
+// третий вид продуктов
+
+.products-list_list-view {
+    padding: 15px 14px 0 12px;
+    margin-left: 19px;
+    min-height: 33px; 
+    .slider-product__wrap-main-img,
+    .slider-product__min,
+    .description-product__text,
+    .description-product__rating{
+        display: none;
+    }
+    .description-product__title {
+        font: 14px/20px "open_sansregular", sans-serif;
+        display: inline-block;
+        margin-top: 5px;
+    }
+    .description-product__title:before {
+        content: 'Смартфон ';
+        display: block;
+        width: 40px;
+        height: 10px;
+        font: 14px/20px "open_sansregular", sans-serif;
+        display: inline-block;
+        margin-right: 35px;
+    }
+    .description-product {
+        margin-left: 11px;
+        width: 300px;
+    }
+    .vendor-product {
+        padding-top: 7px;
+    }
+    .vendor-product__text,
+    .vendor-product__value{
+        font-family: "open_sansbold";
+    }
+    .description-product__text {
+        line-height: normal;
+        margin: 0;
+    }
+    .purchase-product {
+        border-left: none;
+        position: relative;
+        float: left;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+        width: 298px;
+    }
+    .purchase-product__price {
+        margin-bottom: 0;
+        text-align: left;
+        float: left;
+        font-size: 18px;
+
+        &:after {
+            content: "";
+            display: inline-block;
+            margin-left: 5px;
+            @include icons-sprite(rub-list);
+            width: icons-sprite-width(rub-list);
+            height: icons-sprite-height(rub-list);
+        }
+    }
+    
+    .purchase-product__buy {
+        position: relative;
+        float: right;
+        top: 0;
+        left: 0;
+    }
+    .purchase-product__in-basket {
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+    .purchase-product__wrap-availability {
+        padding-top: 8px;
+        float: left;
+    }
+}
