@@ -170,6 +170,7 @@ var changeView = (function(){
 			itemProduct.each( function(){
 				$(this).removeClass('products-list_list-view')
 					.addClass('products-list_tile-view');
+				
 			} );
 		} else if(listItem.hasClass('view-list__item_list-three')){
 			listItem.addClass('active');
@@ -181,7 +182,9 @@ var changeView = (function(){
 			} );
 		}
   };
+// $(view-list__item)
 
+// .on('click').addClass('filter__active-two');
 	return {
 		init: init
 	};
